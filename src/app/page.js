@@ -1,5 +1,10 @@
 import Image from "next/image";
 import SkillCard from "./SkillCard"; // Adjust the import path as needed
+import ExperienceSection from "./components/experience";
+import AboutMe from "./components/aboutMe";
+import Projects from "./components/projects";
+import Testimonials from "./components/testimonial";
+import ContactSection from "./components/contact";
 
 const skillIcons = {
   python: (
@@ -257,7 +262,7 @@ const skillIcons = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white ">
-      {/* <header className="flex text-black justify-between items-center p-10">
+      <header className="flex text-black justify-between items-center p-10">
         <div className="text-lg font-semibold flex items-center space-x-2 ">
           <svg
             width="24"
@@ -309,7 +314,7 @@ export default function Home() {
             />
           </svg>
         </button>
-      </header> */}
+      </header>
 
       <div className="text-black p-10">
         <section className="flex flex-col text-black lg:flex-row items-center  justify-center text-center lg:text-left">
@@ -421,13 +426,39 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <div className="p-10  mt-10 bg-black" id="skills">
+      <div className="p-10  mt-10 bg-black">
         <section>
-          <h3 className="text-4xl mb-5 text-center ">
-            My <samp className="font-extrabold">Experience</samp>
-          </h3>
-          <div className="flex flex-wrap justify-center gap-2"></div>
+          <div className="flex h-[80vh] flex-wrap justify-center gap-2">
+            <ExperienceSection />
+          </div>
         </section>
+      </div>
+      <div className="p-10  mt-10 ">
+        <AboutMe />
+      </div>
+      <div className="p-10  mt-10 bg-black" id="projects">
+        <section>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Projects />
+          </div>
+        </section>
+      </div>
+      <div className="p-10  mt-10 ">
+        <section>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Testimonials />
+          </div>
+        </section>
+      </div>
+      <div className="p-10  mt-10 " id="contact">
+        <section>
+          <div className="flex flex-wrap justify-center gap-2">
+            <ContactSection />
+          </div>
+        </section>
+      </div>
+      <div className="h-24 bg-black  border-t border-gray-300 pt-6 px-6 flex justify-between items-center">
+        <p className="">© 2024-2025 Khadija Mahdi</p>
       </div>
     </div>
   );
