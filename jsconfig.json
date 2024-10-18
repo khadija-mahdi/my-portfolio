@@ -3,5 +3,12 @@
     "paths": {
       "@/*": ["./src/*"]
     }
+  },
+  "jsc": {
+    "transform": {
+      "react": {
+        "throwIfNamespace": false
+      }
+    }
   }
 }
