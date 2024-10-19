@@ -32,32 +32,34 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <div className="experience-section">
-      <h2 className="text-center text-4xl  mb-8">
-        My <span className="font-bold">Experience</span>
-      </h2>
+      <div className="mb-16 text-center text-4xl flex flex-row justify-center">
+        <div className="mr-4">My</div>
+        <h3 className="font-extrabold">Experience</h3>
+      </div>
 
       <div className="experience-list space-y-6">
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="experience-item bg-black text-white p-6 border rounded-lg border-[#D4D4D8] shadow-md flex justify-between items-center"
+            className="experience-item bg-black text-white p-6 border rounded-lg border-[#71717A] shadow-md flex justify-between items-center"
           >
             <div className="flex items-center space-x-4">
               <div>
-                <div className="flex flex-row gap-5 justify-start">
-                  <img
+                <div className="flex flex-row gap-8 justify-start">
+                  <Image
                     src={exp.icon}
                     alt={`${exp.company} logo`}
-                    className="w-8 h-8"
+                    width={32}
+                    height={32}
                   />
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-[24px] font-semibold">
                     {exp.title} at {exp.company}
                   </h3>
-                  <div className="text-right  text-sm justify-end ml-auto">
-                    <p>{exp.period}</p>
+                  <div className="text-right font-semibold text-[16px] justify-end ml-auto text-[#D4D4D8]">
+                    <h6>{exp.period}</h6>
                   </div>
                 </div>
-                <p className="mt-2 text-sm ">{exp.description}</p>
+                <p className=" text-sm text-[#D4D4D8] mt-6">{exp.description}</p>
               </div>
             </div>
           </div>

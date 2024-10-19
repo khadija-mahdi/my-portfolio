@@ -280,9 +280,9 @@ export default function Home() {
               fill="black"
             />
           </svg>
-          <div>Portfolio</div>
+          <h5>Portfolio</h5>
         </div>
-        <nav className="space-x-7 text-[19px] font-bold">
+        <nav className="flex  gap-8 text-[20px] font-semibold">
           <a href="#about" className="hover:underline">
             About Me
           </a>
@@ -316,19 +316,24 @@ export default function Home() {
         </button>
       </header>
 
-      <div className="text-black p-10">
+      <div className="text-black p-10 max-w-[90vh" >
         <section className="flex flex-col text-black lg:flex-row items-center  justify-center text-center lg:text-left">
-          <div className="lg:w-[60%]">
-            <h1 className=" text-5xl  font-light ">
-              Hello, I’am <span className=" font-bold">Khadija Mahdi.</span>
-            </h1>
-            <h2 className="text-5xl font-light mt-2">
-              <span className="font-bold">Software</span>{" "}
-              <span className="font-bold outline-title">Engineer</span>
-              <br />
-              Student in <span className="font-bold">1337</span>.
-            </h2>
-            <p className="mt-4 text-gray-600">
+          <div className="lg:w-[60%] flex gap-8 flex-col">
+            <div className=" text-[48px] gap-5">
+              <h1 className="">
+                Hello, I’am{" "}
+                <span className=" font-extrabold">Khadija Mahdi.</span>
+              </h1>
+              <h2 className="font-light ">
+                <span className="font-extrabold">Software</span>{" "}
+                <span className="font-bold outline-title">Engineer</span>
+                <br />
+              </h2>
+              <h2 className="ont-light ">
+                Student in <span className="font-bold">1337</span>.
+              </h2>
+            </div>
+            <p className=" text-gray-600 text-xs">
               I’m a software developer honing my skills at 1337 School.
               Passionate about technology, I have a strong foundation in
               programming languages and problem-solving. I thrive on creating
@@ -336,7 +341,7 @@ export default function Home() {
               to detail, and commitment to delivering high-quality work.
             </p>
             {/* Skills Section */}
-            <section className="flex justify-start space-x-6 mt-6 ">
+            <section className="flex justify-start space-x-6">
               <a
                 href="https://github.com/khadija-mahdi"
                 target="_blank"
@@ -400,13 +405,14 @@ export default function Home() {
             />
           </div>
         </section>
-        <div className=" pt-10" id="skills">
+        <div className="text-black pt-10" id="skills">
           <section>
-            <h3 className="text-4xl mb-5 text-center ">
-              My <samp className="font-extrabold">Skills</samp>
-            </h3>
-            <div className="max-w-[1216px]">
-              <div className="h-full flex flex-wrap items-center gap-4 justify-between min-w-[320px]">
+            <div className="mb-16 text-center text-4xl flex flex-row justify-center">
+              <div className="mr-4">My</div>
+              <h3 className="font-extrabold">Skills</h3>
+            </div>
+            <div className=" justify-center">
+              <div className="h-full flex  flex-wrap justify-between gap-4 min-w-[320px]">
                 <SkillCard icon={skillIcons.c} name="C" />
                 <SkillCard icon={skillIcons.cpp} name="C++" />
                 <SkillCard icon={skillIcons.js} name="JavaScript" />
@@ -414,7 +420,7 @@ export default function Home() {
                 <SkillCard icon={skillIcons.python} name="Python" />
                 <SkillCard icon={skillIcons.react} name="React" />
               </div>
-              <div className="h-full flex flex-wrap md:items-center gap-4 mt-5 justify-between min-w-[320px]">
+              <div className="h-full flex  flex-wrap justify-between gap-4 pt-6 min-w-[320px]">
                 <SkillCard icon={skillIcons.next} name="Next.js" />
                 <SkillCard icon={skillIcons.django} name="Django" />
                 <SkillCard icon={skillIcons.tailwind} name="Tailwind CSS" />
@@ -426,9 +432,9 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <div className="p-10  mt-10 bg-black">
+      <div className="pt-14 mt-10 bg-black">
         <section>
-          <div className="flex h-[80vh] flex-wrap justify-center gap-2">
+          <div className="flex h-[80vh] mx-20  flex-wrap justify-center gap-2">
             <ExperienceSection />
           </div>
         </section>

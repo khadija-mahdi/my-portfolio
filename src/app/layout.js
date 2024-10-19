@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Sora } from "@next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +13,11 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Add the weights you need
+});
+
 export const metadata = {
   title: "Khadija Mahdi Portfolio",
   description: "Portfolio Of Khadija Mahdi",
@@ -21,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${sora.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
